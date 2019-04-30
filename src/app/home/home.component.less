@@ -1,0 +1,224 @@
+.ng-slide {
+  .slider-image {
+    img {
+      width: 100%;
+      max-height: 400px;
+      float: right;
+    }
+  }
+}
+
+.selectedproduct {
+  .example-card {
+    .mat-button {
+      background-color: #23272b;
+      color: #fff;
+    }
+  }
+}
+
+
+.img-row {
+  margin: 25px 0;
+
+  img {
+    width: auto;
+    height: 100%;
+    max-height: 200px;
+    display: block;
+    margin: 0 auto;
+    opacity: 0.7;
+    max-width: 100%;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.selectedproduct {
+  background: #20a1ce;
+
+  .example-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .mat-card {
+    //background-image: linear-gradient(to right, rgb(0, 123, 254), #b125ad);
+    box-shadow: none;
+    border-radius: 0;
+    padding:0;
+    h3 {
+      text-align: left;
+      color: #00a8ff;
+    }
+    p {
+      //color: white;
+      font-size: 24px;
+    //  font-weight: 500;
+    text-align: left;
+    }
+
+    button {
+      width: 45%;
+      padding: 5px;
+      background: rgb(7, 7, 7);
+      color: #fafafa;
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+
+  .cardimage {
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: 0 auto;
+
+    }
+
+  }
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+.img-row{
+  a{
+    text-decoration: none;
+  }
+}
+  .example-card {
+    cursor: pointer;
+    //background-image: linear-gradient(to right, #007bfe, #dad2d9);
+   // border: 1px solid #97b2d1;
+    text-align: center;
+    background: #f9f9f9;
+    &.mat-card {
+      .mat-card-header-text {
+        width: 100%;
+      }
+      &:hover{
+        box-shadow: 0px 1px 6px 6px #dff2f9;
+      }
+    }
+  }
+}
+
+.ng-slide {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #20a1ce;
+
+  .slider-text {
+    text-align: center;
+    padding-top: 140px;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .slider-image {
+    padding: 0;
+  }
+}
+
+mat-card-content.mat-card-content {
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .product-description {
+    font-size: 20px;
+    p{
+      text-align: justify;
+      color: #00a8ff;
+      margin: 10px 0;
+    }
+  }
+  .product-card-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &:hover {
+    text-decoration: none;
+    img {
+      transform: scale(1.01);
+    }
+  }
+
+  img {
+    transition: transform .25s, visibility .25s ease-in;
+    transform-origin: center center;
+  }
+}
+
+.cardimage {
+  height: 300px;
+  overflow: hidden;
+
+  img {
+    transition: transform .5s ease;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ng-slide {
+    flex-direction: column-reverse;
+
+    .slider-text {
+      padding-top: 0;
+    }
+  }
+
+  .ng-slide {
+    .slider-image {
+      img {
+        width: 100%;
+        max-height: 250px;
+        float: right;
+      }
+    }
+  }
+
+  .selectedproduct {
+    .example-card {
+      button {
+        width: 90%;
+        padding: 5px;
+        text-align: center;
+        margin: 10px auto;
+        display: block;
+      }
+    }
+  }
+}
+.example-card{
+  .mat-card-header{
+    .header-title{
+      width: 100%;
+    }
+  }
+  }
+  .items{
+      .img-row{
+          &:nth-child(even){
+            mat-card-content{
+                flex-direction: row-reverse;
+              }
+          }
+      }
+    }

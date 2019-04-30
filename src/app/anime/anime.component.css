@@ -1,0 +1,13 @@
+.img-row {
+  margin: 25px 0;
+}
+.img-row img {
+  max-height: 250px;
+  width: 50%;
+  height: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.rounded {
+  border-radius: 2.25rem!important;
+}

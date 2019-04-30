@@ -1,0 +1,32 @@
+.culture-booklet-header {
+  color: #00a8ff;
+}
+.description {
+  margin: 0 0 25px 0;
+}
+.description p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 33px;
+  text-align: justify;
+}
+.description ul {
+  margin: 20px 0;
+  list-style: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 0;
+}
+.description ul li {
+  background: #00a8ff;
+  border-radius: 2px;
+  padding: 7px 10px;
+  margin-bottom: 8px;
+  transition: transform 0.25s, visibility 0.25s ease-in;
+  transform-origin: center center;
+}
+.description ul li:hover {
+  background-color: #f14ad4;
+  transform: scale(1.01);
+  font-weight: 400;
+}

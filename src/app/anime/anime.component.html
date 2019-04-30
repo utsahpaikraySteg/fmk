@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="row" *ngIf="anime$">
+        <div *ngFor="let anime of anime$.characters" class="col-6 img-row rounded">
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>{{ anime.name }}</mat-card-title>
+                </mat-card-header>
+                <img class="rounded border border-primary" mat-card-image src="{{ anime.image_url }}" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>LIKE</button>
+                </mat-card-actions>
+              </mat-card>
+        </div>
+    </div>
+  </div>
+</div>

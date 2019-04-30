@@ -1,0 +1,55 @@
+nav .navbar-collapse {
+  justify-content: flex-end;
+}
+nav.navbar-dark .navbar-brand {
+  color: #333;
+}
+nav img {
+  width: 50px;
+}
+nav .firstpart {
+  font-weight: 700;
+  font-size: 26px;
+  color: #00a8ff;
+}
+nav .secondpart {
+  font-size: 22px;
+  padding: 0px;
+  padding-left: 4px;
+  font-weight: 600;
+  color: #ef0fd1;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  transition: transform 0.2s, visibility 0.2s ease-in;
+  transform-origin: center center;
+  font-size: 17px;
+  font-weight: 500;
+}
+nav ul li.nav-item:hover {
+  background-color: #f14ad4;
+  cursor: pointer;
+  transform: scale(1.01);
+}
+nav ul li.nav-item:hover a {
+  color: #fff;
+}
+nav ul li.nav-item .nav-link {
+  padding: 18px;
+  color: #333;
+}
+nav ul li.nav-item .nav-link.activated {
+  color: #fff;
+}
+nav ul li .activated {
+  background-color: #00a8ff;
+}
+@media only screen and (max-width: 767px) {
+  ul li.nav-item:last-child {
+    border-bottom: 1px solid #080808;
+  }
+}

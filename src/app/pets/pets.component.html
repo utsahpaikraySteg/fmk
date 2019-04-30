@@ -1,0 +1,106 @@
+<div class="row"  @myInsertRemoveTrigger>
+  <div class="col-md-12">
+    <h1 class="text-center text-primary font-weight-bold">Career at MFK Software </h1>
+    <h4 class="text-primary heading-2"><span>We Believe in</span> </h4>
+    <div  @myInsertRemoveTrigger class="col-12 col-md-6">
+      <ul>
+        <li>Passion</li>
+        <li>Enthusiasm </li>
+        <li>Honesty</li>
+        <li>Loyalty </li>
+        <li>Trust </li>
+      </ul>
+    </div>
+    <h4 class="text-primary heading-2"><span>Open Positions</span> </h4>
+    <div class="open-positions">
+      <mat-accordion class="example-headers-align"  @myInsertRemoveTrigger>
+        <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                <h5> XYZ Specialist </h5>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div>
+              <p>Reports To: The [job title] will report to [positions title or titles this position reports to].
+                  Job Overview: Provide a brief, 4-sentence description of the role, what success in the position looks like, and
+                  how it fits into the company or organization overall.
+                  Responsibilities and Duties:</p>
+                <div class="col-12 col-md-6">
+                  <ul>
+                    <li>List the essential duties required to carry out this job.</li>
+                    <li>List them in order of importance.</li>
+                    <li>Use complete sentences.</li>
+                    <li>Start sentences with verbs.</li>
+                    <li>Use the present tense.</li>
+                    <li>Use gender-neutral language.</li>
+                  </ul>
+                </div>
+                <h4 class="text-primary"><span> Qualifications:</span></h4>
+                <div class="col-12 col-md-6">
+                  <ul>
+                    <li>Education level.</li>
+                    <li>Experience.</li>
+                    <li>Specific skills.</li>
+                    <li>Personal characteristics.</li>
+                    <li>Certifications.</li>
+                    <li>Licenses.</li>
+                    <li>Physical abilities.</li>
+                  </ul>
+                </div>
+          </div>
+          <mat-action-row>
+              <button mat-button color="primary" (click)="nextStep()">Next</button>
+            </mat-action-row>
+        </mat-expansion-panel>
+      
+        <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                <h5> ABC Specialist </h5>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div>
+              <p>Reports To: The [job title] will report to [positions title or titles this position reports to].
+                  Job Overview: Provide a brief, 4-sentence description of the role, what success in the position looks like, and
+                  how it fits into the company or organization overall.
+                  Responsibilities and Duties:</p>
+                <div class="col-12 col-md-6">
+                  <ul>
+                    <li>List the essential duties required to carry out this job.</li>
+                    <li>List them in order of importance.</li>
+                    <li>Use complete sentences.</li>
+                    <li>Start sentences with verbs.</li>
+                    <li>Use the present tense.</li>
+                    <li>Use gender-neutral language.</li>
+                  </ul>
+                </div>
+                <h4 class="text-primary"><span> Qualifications:</span></h4>
+                <div class="col-12 col-md-6">
+                  <ul>
+                    <li>Education level.</li>
+                    <li>Experience.</li>
+                    <li>Specific skills.</li>
+                    <li>Personal characteristics.</li>
+                    <li>Certifications.</li>
+                    <li>Licenses.</li>
+                    <li>Physical abilities.</li>
+                  </ul>
+                </div>
+          </div>
+          <mat-action-row>
+            <button mat-button color="primary" (click)="prevStep()">Prev</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+          </mat-action-row>
+          
+        </mat-expansion-panel>
+      
+    </mat-accordion>
+    </div>
+    <!-- <p class="font-weight-bold carrier-mailto">Email:career@mfksoftware.com</p> -->
+    <div class="col-12 carrire-apply">
+      <button class="btn btn-md"> Apply </button>
+    </div>
+
+  </div>
+</div>
+

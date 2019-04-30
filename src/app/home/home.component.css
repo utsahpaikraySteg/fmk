@@ -1,0 +1,160 @@
+.ng-slide .slider-image img {
+  width: 100%;
+  max-height: 400px;
+  float: right;
+}
+.selectedproduct .example-card .mat-button {
+  background-color: #23272b;
+  color: #fff;
+}
+.img-row {
+  margin: 25px 0;
+}
+.img-row img {
+  width: auto;
+  height: 100%;
+  max-height: 200px;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.7;
+  max-width: 100%;
+}
+.img-row img:hover {
+  opacity: 1;
+}
+.selectedproduct {
+  background: #20a1ce;
+}
+.selectedproduct .example-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.selectedproduct .mat-card {
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+.selectedproduct .mat-card h3 {
+  text-align: left;
+  color: #00a8ff;
+}
+.selectedproduct .mat-card p {
+  font-size: 24px;
+  text-align: left;
+}
+.selectedproduct .mat-card button {
+  width: 45%;
+  padding: 5px;
+  background: #070707;
+  color: #fafafa;
+  font-size: 20px;
+  font-weight: 400;
+}
+.selectedproduct .cardimage img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.items {
+  display: flex;
+  justify-content: center;
+}
+.items .img-row a {
+  text-decoration: none;
+}
+.items .example-card {
+  cursor: pointer;
+  text-align: center;
+  background: #f9f9f9;
+}
+.items .example-card.mat-card .mat-card-header-text {
+  width: 100%;
+}
+.items .example-card.mat-card:hover {
+  box-shadow: 0px 1px 6px 6px #dff2f9;
+}
+.ng-slide {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #20a1ce;
+}
+.ng-slide .slider-text {
+  text-align: center;
+  padding-top: 140px;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}
+.ng-slide .slider-image {
+  padding: 0;
+}
+mat-card-content.mat-card-content {
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+mat-card-content.mat-card-content .product-description {
+  font-size: 20px;
+}
+mat-card-content.mat-card-content .product-description p {
+  text-align: justify;
+  color: #00a8ff;
+  margin: 10px 0;
+}
+mat-card-content.mat-card-content .product-card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+mat-card-content.mat-card-content:hover {
+  text-decoration: none;
+}
+mat-card-content.mat-card-content:hover img {
+  transform: scale(1.01);
+}
+mat-card-content.mat-card-content img {
+  transition: transform 0.25s, visibility 0.25s ease-in;
+  transform-origin: center center;
+}
+.cardimage {
+  height: 300px;
+  overflow: hidden;
+}
+.cardimage img {
+  transition: transform .5s ease;
+}
+.cardimage:hover img {
+  transform: scale(1.1);
+}
+@media only screen and (max-width: 767px) {
+  .ng-slide {
+    flex-direction: column-reverse;
+  }
+  .ng-slide .slider-text {
+    padding-top: 0;
+  }
+  .ng-slide .slider-image img {
+    width: 100%;
+    max-height: 250px;
+    float: right;
+  }
+  .selectedproduct .example-card button {
+    width: 90%;
+    padding: 5px;
+    text-align: center;
+    margin: 10px auto;
+    display: block;
+  }
+}
+.example-card .mat-card-header .header-title {
+  width: 100%;
+}
+.items .img-row:nth-child(even) mat-card-content {
+  flex-direction: row-reverse;
+}

@@ -1,0 +1,156 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{card.title}}
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div><img mat-card-image src="{{ card.image }}" alt="Photo of a Shiba Inu"></div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
+  <!-- <h3>Basic Buttons</h3>
+<div class="example-button-row">
+  <button mat-button>Basic</button>
+  <button mat-button color="primary">Primary</button>
+  <button mat-button color="accent">Accent</button>
+  <button mat-button color="warn">Warn</button>
+  <button mat-button disabled>Disabled</button>
+  <a mat-button routerLink=".">Link</a>
+</div> -->
+
+<h3>Raised Buttons</h3>
+<div class="example-button-row">
+  <button mat-raised-button>Basic</button>
+  <button mat-raised-button color="primary" (click)="myClickFunction(color)" >Primary</button>
+</div>
+
+<!-- <h3>Stroked Buttons</h3>
+<div class="example-button-row">
+  <button mat-stroked-button color="primary">Primary</button>
+  <button mat-stroked-button disabled>Disabled</button>
+  <a mat-stroked-button routerLink=".">Link</a>
+</div>
+
+<h3>Flat Buttons</h3>
+<div class="example-button-row">
+  <button mat-flat-button color="accent">Accent</button>
+  <button mat-flat-button color="warn">Warn</button>
+  <button mat-flat-button disabled>Disabled</button>
+  
+</div> -->
+
+<!-- <h3>Icon Buttons</h3>
+<div class="example-button-row">
+  <button mat-icon-button>
+    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+  </button>
+  <button mat-icon-button color="primary">
+    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+  </button>
+</div>
+
+<h3>Fab Buttons</h3>
+<div class="example-button-row">
+  <button mat-fab>Basic</button>
+  <button mat-fab color="primary">Primary</button>
+  <button mat-fab color="accent">Accent</button>
+</div> -->
+</div>
+<mat-card>
+  <mat-card-content>
+    <h2 class="example-h2">Progress bar configuration</h2>
+
+    <section class="example-section">
+      <label class="example-margin">Color:</label>
+      <mat-radio-group [(ngModel)]="color">
+        <mat-radio-button class="example-margin" value="primary">
+          Primary
+        </mat-radio-button>
+        <mat-radio-button class="example-margin" value="accent">
+          Accent
+        </mat-radio-button>
+        <mat-radio-button class="example-margin" value="warn">
+          Warn
+        </mat-radio-button>
+      </mat-radio-group>
+      {{color}}
+    </section>
+    <button mat-raised-button color={{color}}>{{color}}</button>
+    <section class="example-section">
+      <label class="example-margin">Mode:</label>
+      <mat-radio-group [(ngModel)]="mode">
+        <mat-radio-button class="example-margin" value="determinate">
+          Determinate
+        </mat-radio-button>
+        <mat-radio-button class="example-margin" value="indeterminate">
+          Indeterminate
+        </mat-radio-button>
+        <mat-radio-button class="example-margin" value="buffer">
+          Buffer
+        </mat-radio-button>
+        <mat-radio-button class="example-margin" value="query">
+          Query
+        </mat-radio-button>
+      </mat-radio-group>
+    </section>
+
+    <section class="example-section" *ngIf="mode === 'determinate' || mode === 'buffer'">
+      <label class="example-margin">Progress:</label>
+      <mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
+    </section>
+    <section class="example-section" *ngIf="mode === 'buffer'">
+      <label class="example-margin">Buffer:</label>
+      <mat-slider class="example-margin" [(ngModel)]="bufferValue"></mat-slider>
+    </section>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-content>
+    <h2 class="example-h2">Result</h2>
+
+    <section class="example-section">
+      <mat-progress-bar
+          class="example-margin"
+          [color]="color"
+          [mode]="mode"
+          [value]="value"
+          [bufferValue]="bufferValue">
+      </mat-progress-bar>
+    </section>
+  </mat-card-content>
+</mat-card>
+<mat-slide-toggle>Slide me!</mat-slide-toggle>
+<div><code>observable|async</code>:Time: {{ t | async }}</div>

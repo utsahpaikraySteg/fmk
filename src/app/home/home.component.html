@@ -1,0 +1,108 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- <section class="example-section">
+      <label class="example-margin">Color:</label>
+      <mat-radio-group  [(ngModel)]="data.caseDetails.color">
+        <mat-radio-button class="example-margin" value="#dc3545">
+            #dc3545
+        </mat-radio-button>
+        <mat-radio-button class="example-margin" value="#a535dc">
+            #a535dc
+        </mat-radio-button>
+        <mat-radio-button class="example-margin" value="#35dc98">
+            #35dc98
+        </mat-radio-button>
+      </mat-radio-group>
+    </section> [ngStyle]="{'background-color':data.caseDetails.color}"-->
+    <div class="">
+        <div *ngIf="item" @myInsertRemoveTrigger class="selectedproduct">
+          <div>
+             <div>
+                <mat-card class="example-card">
+                  <div class="col-12 col-md-6">
+                    <h3>The most user friendly ERP application for academic institutions</h3>
+                    <p *ngIf="item.items[0].content.productFullDescription">MFK Software ERP is a robust, easy to use, highly customize and the most secured application for educational institutions. 
+                    </p>
+                    <div class="col-12">
+                    <button  (click)="open(onlinedemoform)" mat-raised-button matTooltip="ERP Demo" aria-label="Button that displays a tooltip when focused or hovered over">ERP Demo</button>
+                    <!-- <button class="btn btn-dark btn-md">Demo</button> -->
+                    </div>
+                    
+                  </div>
+                <div class="col-12 col-md-6 cardimage">
+                    <img class="rounded border" mat-card-image src="assets/demo.png" alt="{Photo of a Shiba Inu}">
+                </div> 
+                </mat-card>
+            </div> 
+          </div>
+      </div>
+    </div>
+    <!-- <div class="col-12">
+        <div class="row items" *ngIf="item">
+            <div *ngFor="let item of item.items" class="col-12 col-md-4 img-row rounded" (mouseenter)="productSelection=item.content.productName">
+                <a routerLink="/{{item.link}}">
+                  <mat-card class="example-card" matTooltip="{{item.content.productName}}">
+                  
+                      <div class="header-title"> 
+                        <mat-card-title>{{item.content.productName}}</mat-card-title>
+                      </div>
+                
+                    <mat-card-content>
+                        <img class="rounded" mat-card-image src="{{item.mainImage.src}}"
+                        alt="{Photo of a Shiba Inu}">
+                    </mat-card-content>
+                    <mat-card-actions>
+                    </mat-card-actions>
+                  </mat-card>
+              </a>
+            </div>
+          </div>
+    </div> -->
+    <div class="col-12">
+        <div class="row items" *ngIf="item">
+            <div *ngFor="let item of item.items" @myInsertRemoveTrigger class="col-12 img-row rounded" (mouseenter)="productSelection=item.content.productName">
+                <a routerLink="/{{item.link}}">
+                  <mat-card class="example-card" matTooltip="{{item.content.productName}}">
+                  
+                      <div class="header-title"> 
+                        <mat-card-title>{{item.content.productName}}</mat-card-title>
+                      </div>
+                
+                    <mat-card-content>
+                      <div class="col-md-6 product-card-img">
+                          <img class="rounded" mat-card-image src="{{item.mainImage.src}}"
+                          alt="{Photo of a Shiba Inu}">
+                      </div>
+                      <div class="col-md-6 product-description">
+                        <p>{{item.content.productFullDescription}}</p>
+                      </div>
+                        
+                    </mat-card-content>
+                  </mat-card>
+              </a>
+            </div>
+          </div>
+    </div>
+  </div>
+  <!-- <div class="modal" id="onlinedemoform">
+      <div class="modal-dialog">
+        <div class="modal-content">                     
+          <div class="modal-body">
+            <h2>Online Demo Form</h2>
+              <app-raectiveform></app-raectiveform>
+          </div> 
+        </div>
+      </div>
+  </div> -->
+  <ng-template #onlinedemoform let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Online Demo Form</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <app-raectiveform></app-raectiveform>
+    </div>
+  </ng-template>
+</div>

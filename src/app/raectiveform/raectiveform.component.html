@@ -1,0 +1,81 @@
+<!-- main app container -->
+<div class="">
+  <div class="container">  
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+              <mat-form-field appearance="outline">
+                  <mat-label>Full Name</mat-label>
+                  <input matInput type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" placeholder="First Name">
+                  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                      <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                    </div>
+              </mat-form-field>
+              
+          </div>
+          <div class="form-group">
+              <mat-form-field appearance="outline">
+                  <mat-label>Email</mat-label>
+                  <input matInput  type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="Email">
+                  <mat-icon matSuffix>email</mat-icon>
+                  <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                      <div *ngIf="f.email.errors.required">Email is required</div>
+                  </div>
+              </mat-form-field>
+            </div>
+          <div class="form-group">
+              <mat-form-field appearance="outline">
+                  <mat-label>Institute Name</mat-label>
+                  <input matInput  type="text" formControlName="instituteName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.instituteName.errors }" placeholder="Institute Name">
+                  <mat-icon matSuffix>business</mat-icon>
+                  <div *ngIf="submitted && f.instituteName.errors" class="invalid-feedback">
+                      <div *ngIf="f.instituteName.errors.required">Institute Name is required</div>
+                    </div>
+              </mat-form-field>
+            </div>
+          <div class="form-group">
+            <mat-form-field appearance="outline">
+                <mat-label>Student Strength</mat-label>
+                <input matInput  type="text" formControlName="studentStength" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.studentStength.errors }" placeholder="Student Strength">
+                <mat-icon matSuffix>group</mat-icon>
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+              <mat-form-field appearance="outline">
+                  <mat-label>Address</mat-label>
+                  <input matInput  type="text" formControlName="address" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.address.errors }" placeholder="Address">
+                  <mat-icon matSuffix>perm_contact_calendar</mat-icon>
+              </mat-form-field>
+          </div>
+          <div class="form-group">
+              <mat-form-field appearance="outline">
+                  <mat-label>Contact Number</mat-label>
+                  <input matInput  type="text" formControlName="ContactNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ContactNumber.errors }" placeholder="Contact Number">
+                  <mat-icon matSuffix>contacts</mat-icon>
+              </mat-form-field>
+          </div>
+          <div class="form-group">
+              <mat-form-field appearance="outline">
+                  <mat-label>Preffered Contact Time</mat-label>
+                  <input matInput  type="text" formControlName="PreffredContactTime" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.PreffredContactTime.errors }" placeholder="Preffered Contact Time">
+                  <mat-icon matSuffix>schedule</mat-icon>
+              </mat-form-field>
+          </div>
+          <div class="form-group">
+              <mat-form-field appearance="outline">
+                  <mat-label>Query</mat-label>
+                  <textarea matInput formControlName="query" class="form-control" placeholder="Query"></textarea>
+                  <mat-icon matSuffix>question_answer</mat-icon>
+              </mat-form-field>
+          </div>    
+          <!-- <div class="form-group">
+            <input type="file" formControlName="uploadfile" class="form-control"  id="uploadfile" name="file" (change)="upload($event)"/>
+          </div> -->
+          <div class="form-group button-group">
+            <button [disabled]="loading" class="btn btn-primary">submit</button>
+          </div>
+          
+        </form>
+        
+  </div>
+</div>
