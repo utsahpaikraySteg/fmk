@@ -5,7 +5,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModalConfig, NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { MatSnackBar } from '@angular/material';
 import { ConfirmsnackbarComponent } from '../confirmsnackbar/confirmsnackbar.component';
-import { FileUploader, FileSelectDirective } from 'ng2-file-upload/ng2-file-upload';
 import { HttpClient } from '@angular/common/http';
 import { DataService } from '../data.service';
 
@@ -17,10 +16,7 @@ const URL = 'http://localhost:3000/posts';
   providers: [NgbModalConfig, NgbModal]
 })
 export class RaectiveformComponent implements OnInit {
-  public uploader: FileUploader = new FileUploader({
-    url: URL,
-    itemAlias: 'photo'
-  });
+
   registerForm: FormGroup;
   submitted = false;
   model: any = {};
